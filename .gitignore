@@ -65,7 +65,7 @@
 !/.github/workflows/*.yml
 
 # Models
-
+/model/
 /models/*
 /models-mnt
 !/models/.editorconfig
