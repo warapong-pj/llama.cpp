@@ -6,3 +6,10 @@ services:
     volumes:
       - ./models:/models
     command: --host 0.0.0.0 --port 8080 -m /models/Qwen3.5-9B.q5_k_m.gguf --alias "Qwen3.5-9B" -ngl 99 --ctx-size 32768 --jinja
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
